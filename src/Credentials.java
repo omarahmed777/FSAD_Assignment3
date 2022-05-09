@@ -1,5 +1,3 @@
-//Replace these with your own!
-
 public class Credentials {
     //JDBC connection
     public static final String USERNAME = "postgres";

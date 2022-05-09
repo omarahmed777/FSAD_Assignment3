@@ -10,9 +10,11 @@ public class Server {
 
         /* Create a Database object and check the connection with establishDBConnection(): */
         Database db = new Database();
+
         /* If the db connection fails, print: */
         if (!db.establishDBConnection()) {
             System.out.println("DB connection fail, stopping.");
+            serverSocket.close();
         } else { /* else connect to DB and print: */
             System.out.println("Server is now connected to DB");
             int clientId = 0;

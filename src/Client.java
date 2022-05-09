@@ -17,21 +17,21 @@ public class Client {
 
         /* Read messages continuously until the user types "stop" */
         while (true) {
-            // Gets artist name from client
+            /* Get artist name from user */
             System.out.println("Enter the artist name:");
             artistName = inFromUser.readLine();
-            // Sends message to server
-            outToServer.println(artistName);
-            // Receive response from the server
-            serverMessage = inFromServer.readLine();
             System.out.println("You entered " + artistName);
+            /* Send message to server */
+            outToServer.println(artistName);
+            /* Receive response from the server */
+            serverMessage = inFromServer.readLine();
             System.out.println("FROM SERVER: " + serverMessage);
-            // when "stop" is entered
+            /* when "stop" is entered */
             if (artistName.equals("stop")) {
                 break;
             }
         }
-        // Close I/O streams and socket
+        /* Close I/O streams and socket */
         inFromServer.close();
         inFromUser.close();
         outToServer.close();
