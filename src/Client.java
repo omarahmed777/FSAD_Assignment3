@@ -17,10 +17,10 @@ public class Client {
 
         /* Read messages continuously until the user types "stop" */
         while (true) {
-            // Get artist name from client
+            // Gets artist name from client
             System.out.println("Enter the artist name:");
             artistName = inFromUser.readLine();
-            // Send message to server
+            // Sends message to server
             outToServer.println(artistName);
             // Receive response from the server
             serverMessage = inFromServer.readLine();
